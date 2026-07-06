@@ -1,0 +1,1109 @@
+@font-face{
+    font-family:"BDO Grotesk";
+    src:url("../fonts/BDOGrotesk.otf");
+}
+
+:root{
+    --bg:#0C1818;
+    --accent:#A2A1FF;
+    --margin:83px;
+    --gutter:20px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    color:var(--accent);
+    font-family:"BDO Grotesk", sans-serif;
+}
+
+.hero,
+.about,
+.location,
+.future-events,
+footer{
+
+    display:grid;
+
+    grid-template-columns:repeat(12,1fr);
+
+    column-gap:20px;
+
+    padding-left:83px;
+    padding-right:83px;
+}
+.hero-nav{
+
+    position:absolute;
+
+    top:25px;
+    left:83px;
+    right:83px;
+
+    display:flex;
+    justify-content:space-between;
+
+    z-index:100;
+}
+
+.hero-nav a{
+
+    font-size:35px;
+    color:#A2A1FF;
+
+    text-decoration:none;
+
+    font-weight:400;
+}
+.hero{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.logo{
+
+    position:absolute;
+
+    top:100px;
+    left:80px;
+
+    width:1740px;
+
+    z-index:10;
+}
+
+.hero-graphic{
+
+    position:absolute;
+
+    width:1838px;
+    max-width: calc(100% - 40px);
+    left:50%;
+    top:45%;
+    margin: 0 auto;
+    margin-top: 160px;
+
+    transform:translate(-50%,-50%);
+
+    z-index:2;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+.hero-title{
+    position:absolute;
+    width:768px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    margin-top:80px;   /* можно 60–120px */
+    z-index:5;
+}
+.hero{
+    position:relative;
+}
+
+/* кнопка tickets */
+.hero-ticket{
+    position:absolute;
+
+    left:861px;      /* X */
+    top:855.06px;    /* Y */
+
+    width:149.83px;  /* width */
+    height:49.94px;  /* height */
+
+    background:#A2A1FF;
+    border:none;
+
+    font-family:"BDO Grotesk", sans-serif;
+    font-size:35px;
+
+    color:#0C1818;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+}
+
+.about .section-title{
+
+    grid-column:1 / 5;
+
+    width:auto;
+    height:151px;
+
+    margin-top:160px;
+}
+
+.about p{
+
+    grid-column:1 / 12;
+
+    font-size:42px;
+
+    line-height:1.15;
+
+    max-width:1700px;
+
+    margin-top:80px;
+}
+
+/* ===================================
+   LOCATION
+=================================== */
+
+.location{
+
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    column-gap:20px;
+
+    padding-left:83px;
+    padding-right:83px;
+
+    margin-top:220px;
+    margin-bottom:220px;
+
+    align-items:end;
+}
+
+/* Левая часть */
+
+.location-left{
+
+    grid-column:1 / 5;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* SVG Location */
+
+.location-left .section-title{
+
+    width:461px;
+    height:151px;
+
+    object-fit:contain;
+
+    margin-bottom:70px;
+}
+
+/* Текст */
+
+.location-info{
+
+    display:flex;
+    flex-direction:column;
+}
+
+.location-info h3{
+
+    font-size:38px;
+    font-weight:400;
+
+    margin-bottom:28px;
+}
+
+/* Адрес */
+
+.address{
+
+    font-size:36px;
+    line-height:1.15;
+
+    margin-bottom:55px;
+}
+
+/* Телефон */
+
+.contacts{
+
+    font-size:27px;
+    line-height:1.45;
+
+    margin-bottom:90px;
+}
+
+/* Описание */
+
+.location-description{
+
+    font-size:27px;
+    line-height:1.28;
+
+    width:470px;
+}
+
+/* Правая колонка */
+
+.location-right{
+
+    grid-column:5 / 13;
+}
+
+/* Фото */
+
+.location-image{
+
+    width:100%;
+
+    height:658px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+.future-events{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    column-gap:20px;
+
+    padding-left:83px;
+    padding-right:83px;
+    margin-top: 180px;
+}
+
+
+.event{
+    grid-column:1 / 13;
+
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    column-gap:20px;
+
+    margin-top:90px;
+    align-items:start;
+}
+
+.event-info{
+    grid-column:1 / 6;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    height:361px;   /* такая же высота как у фотографии */
+}
+.event-top h3{
+    font-size:75px;
+    font-weight:400;
+    margin:0;
+}
+
+.event-top h4{
+    font-size:50px;
+    font-weight:400;
+    margin-top:8px;
+    line-height:1.05;
+}
+
+.event-image{
+    grid-column:7 / 13;
+
+    width:100%;
+    height:361px;
+
+    object-fit:cover;
+    display:block;
+}
+
+
+.event-info h3{
+    font-size:75px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+.collaboration{
+    font-size:45px;
+    font-weight:400;
+    line-height:1.1;
+
+    margin-top:2px;
+    margin-bottom:15px;
+
+    color:#0AC165;
+}
+.collab-name{
+    color:#0AC165;
+}
+.event-info p{
+    font-size:35px;
+    line-height:1.2;
+    margin:0;
+}
+
+.more-btn{
+    grid-column:1 / 13;
+
+    width:600px;
+    height:90px;
+
+    margin:80px auto 0;
+
+    background:#A2A1FF;
+    color:#0C1818;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:42px;
+
+    transition:0.3s ease;
+}
+
+/* hover эффект */
+.more-btn:hover{
+    background:#0AC165;
+    color:#0C1818;
+}
+
+/* ======================
+   SECTOR 4
+====================== */
+
+/* ==========================================
+              SECTOR 4
+========================================== */
+
+.sector4{
+
+    display:grid;
+
+    grid-template-columns:repeat(12,1fr);
+
+    column-gap:20px;
+
+    padding-left:83px;
+    padding-right:83px;
+
+    margin-top:-120px;
+    margin-bottom:220px;
+
+}
+
+/* ==========================================
+          SVG SECTOR 4
+========================================== */
+
+.sector4-heading{
+
+    grid-column:1 / 13;
+
+}
+
+.sector4-title{
+
+    display:block;
+
+    width:1767px;
+    height:300px;
+
+    object-fit:contain;
+
+}
+
+/* ==========================================
+          CONTENT
+========================================== */
+
+.sector4-content{
+
+    grid-column:1 / 13;
+
+    display:grid;
+
+    grid-template-columns:repeat(12,1fr);
+
+    column-gap:20px;
+
+    margin-top:15px;
+
+    align-items:start;
+
+}
+
+/* ==========================================
+          Artists
+========================================== */
+
+.artists{
+
+    grid-column:1 / 5;
+
+}
+
+.info-title{
+
+    font-size:40px;
+
+    font-weight:400;
+
+    color:#A2A1FF;
+
+    margin-bottom:32px;
+
+    line-height:1;
+
+}
+
+.artists-name{
+
+    font-size:55px;
+    line-height:1.05;
+    font-weight:400;
+white-space:nowrap;
+    width:470px;
+}
+
+/* ==========================================
+          DATE
+========================================== */
+
+.date{
+
+    grid-column:6 / 8;
+
+}
+
+.date .info-value{
+
+    font-size:55px;
+
+    font-weight:400;
+
+    line-height:1;
+
+    color:#A2A1FF;
+
+}
+
+/* ==========================================
+          TIME
+========================================== */
+
+.time{
+
+    grid-column:8 / 10;
+
+}
+
+.time .info-value{
+
+    font-size:55px;
+
+    font-weight:400;
+
+    line-height:1;
+
+    color:#A2A1FF;
+
+}
+
+/* ==========================================
+          PHOTO
+========================================== */
+
+.sector-photo{
+
+    grid-column:10 / 13;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+/* Правая колонка */
+
+.sector-right{
+
+    grid-column:10 / 13;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    height:282px;
+}
+.sector-description{
+
+    font-size:27px;
+
+    line-height:1.15;
+
+    color:#A2A1FF;
+}
+.buy-ticket{
+
+    width:450px;
+    height:99px;
+
+    background:#A2A1FF;
+
+    color:#0C1818;
+
+    text-decoration:none;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:40px;
+
+    font-family:"BDO Grotesk", sans-serif;
+
+    transition:.3s;
+}
+
+.buy-ticket:hover{
+
+    background:#0AC165;
+
+}
+
+.sector-photo img{
+
+    width:424px;
+
+    height:282px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* ==========================================
+          ALIGNMENT
+========================================== */
+
+.date,
+.time{
+
+    padding-top:2px;
+
+}
+
+.sector-photo{
+
+    padding-top:2px;
+
+}
+
+/* ==========================================
+          RESPONSIVE WIDTH
+========================================== */
+
+.sector4-title{
+
+    max-width:100%;
+     width:1767px;
+    height:auto;
+
+}
+
+.sector-photo img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+.site-footer{
+    width:100%;
+    height:620px;
+    background:#A2A1FF;
+    padding:70px 83px 0 83px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+/* Верхние ссылки */
+
+.footer-links-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+
+.footer-col-link{
+    font-family:"BDO Grotesk", sans-serif;
+    font-size:45px;
+    font-weight:500;
+    color:#0C1818;
+    text-decoration:none;
+}
+
+/* Нижняя часть */
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top:70px;
+}
+
+.footer-social{
+    display:flex;
+    gap:60px;
+}
+
+.footer-social-link,
+.footer-policy-link{
+    font-family:"BDO Grotesk", sans-serif;
+    font-size:30px;
+    font-weight:500;
+    color:#0C1818;
+    text-decoration:none;
+}
+
+.footer-copyright{
+    margin-top:24px;
+    font-family:"BDO Grotesk", sans-serif;
+    font-size:23px;
+    font-weight:500;
+    color:#0C1818;
+}
+
+/* Логотип */
+
+.footer-logo-wrap{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    margin-top:auto;
+    padding-bottom:90px;
+}
+
+.footer-logo{
+    width:1756px;
+    height:171.25px;
+    object-fit:contain;
+}
+/* SVG Tickets */
+
+.event-ticket{
+    position:absolute;
+    z-index:20;
+
+    display:block;
+}
+
+.event-ticket img{
+    display:block;
+    width:149.83px;
+    height:auto;
+}
+
+/* Первая кнопка */
+.ticket-1{
+    left:1650px;
+    top:3120px;
+}
+
+/* Вторая кнопка */
+.ticket-2{
+    left:1650px;
+    top:3570px;
+}
+/* =========================
+   UPCOMING EVENT TICKER
+========================= */
+
+.ticker{
+    width:100%;
+    height:59px;
+    background:#0AC165;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+
+    margin-top:80px;
+    margin-bottom:50px;
+}
+
+.ticker-track{
+    display:flex;
+    gap:220px;
+
+    white-space:nowrap;
+
+    animation:tickerMove 22s linear infinite;
+}
+
+.ticker-track span{
+
+    font-size:35px;
+    color:#0C1818;
+
+    font-family:"BDO Grotesk", sans-serif;
+
+    font-weight:500;
+}
+
+@keyframes tickerMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   MOBILE — LABEL
+   iPhone 13 / 390px
+===================================================== */
+
+@media (max-width:768px){
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+body{
+    width:100%;
+}
+
+/* ---------- HEADER ---------- */
+
+.hero{
+    min-height:720px;
+}
+
+.hero-nav{
+    left:20px;
+    right:20px;
+    top:18px;
+
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.hero-nav a{
+    font-size:15px;
+}
+
+.logo{
+    width:350px;
+    left:20px;
+    top:70px;
+}
+
+.hero-graphic{
+    width:420px;
+    left:50%;
+    top:48%;
+    margin-top:0;
+}
+
+.hero-title{
+    width:280px;
+    margin-top:20px;
+}
+
+.hero-ticket{
+    left:50%;
+    transform:translateX(-50%);
+    top:560px;
+
+    width:170px;
+    height:58px;
+
+    font-size:28px;
+}
+
+/* ---------- SECTIONS ---------- */
+
+.about,
+.location,
+.future-events,
+.sector4{
+
+    display:flex;
+    flex-direction:column;
+
+    padding:0 20px;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about{
+    margin-top:70px;
+}
+
+.about .section-title{
+    width:240px;
+    height:auto;
+    margin-top:0;
+    margin-bottom:30px;
+}
+
+.about p{
+    font-size:20px;
+    line-height:1.45;
+    max-width:100%;
+}
+
+/* ---------- LOCATION ---------- */
+
+.location{
+    margin-top:70px;
+    margin-bottom:70px;
+}
+
+.location-left .section-title{
+    width:190px;
+    height:auto;
+}
+
+.location-info h3{
+    font-size:28px;
+}
+
+.address{
+    font-size:24px;
+}
+
+.contacts{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.location-description{
+    width:100%;
+    font-size:18px;
+}
+
+.location-right{
+    margin-top:35px;
+}
+
+.location-image{
+    width:100%;
+    height:auto;
+}
+
+/* ---------- FUTURE EVENTS ---------- */
+
+.future-events{
+    margin-top:30px;
+}
+
+.future-events .section-title{
+    width:290px;
+    height:auto;
+}
+
+.event{
+
+    display:flex;
+    flex-direction:column;
+
+    margin-top:50px;
+}
+
+.event-image{
+    width:100%;
+    height:auto;
+}
+
+.event-info{
+    margin-top:20px;
+}
+
+.event-top{
+    margin-bottom:18px;
+}
+
+.event-info h3{
+    font-size:38px;
+}
+
+.collab-name{
+    display:block;
+    font-size:22px;
+    margin-top:8px;
+}
+
+.event-info p{
+    font-size:20px;
+    line-height:1.4;
+    margin-top:20px;
+}
+
+.event-ticket{
+    display:none;
+}
+
+.more-btn{
+    width:100%;
+    height:68px;
+    font-size:28px;
+}
+
+/* ---------- TICKER ---------- */
+
+.ticker{
+    margin-top:70px;
+    height:45px;
+}
+
+.ticker span{
+    font-size:22px;
+}
+
+/* ---------- SECTOR ---------- */
+
+.sector4{
+    margin-top:70px;
+    margin-bottom:70px;
+}
+
+.sector4-title{
+    width:100%;
+    height:auto;
+}
+
+.sector4-content{
+
+    display:flex;
+    flex-direction:column;
+
+    margin-top:35px;
+}
+
+.info-title{
+    font-size:22px;
+}
+
+.artists-name{
+    width:auto;
+    white-space:normal;
+    font-size:42px;
+}
+
+.date,
+.time{
+    margin-top:30px;
+}
+
+.info-value{
+    font-size:42px !important;
+}
+
+.sector-right{
+    margin-top:35px;
+}
+
+.sector-description{
+    font-size:22px;
+    line-height:1.4;
+}
+
+.buy-ticket{
+    width:100%;
+    height:70px;
+    font-size:30px;
+    margin-top:25px;
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer{
+    height:auto;
+    padding:45px 20px;
+}
+
+.footer-links-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.footer-col-link{
+    font-size:24px;
+}
+
+.footer-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+    margin-top:40px;
+}
+
+.footer-social{
+    flex-direction:column;
+    gap:15px;
+}
+
+.footer-social-link,
+.footer-policy-link{
+    font-size:18px;
+}
+
+.footer-copyright{
+    font-size:14px;
+}
+
+.footer-logo-wrap{
+    padding-bottom:0;
+    margin-top:40px;
+}
+
+.footer-logo{
+    width:100%;
+    height:auto;
+}
+
+}

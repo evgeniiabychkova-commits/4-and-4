@@ -1,0 +1,614 @@
+/* ==========================
+RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#A2A1FF;
+    font-family:"BDO Grotesk",sans-serif;
+    color:#0C1818;
+}
+
+/* ==========================
+HEADER
+========================== */
+
+.site-header{
+    width:100%;
+    height:85px;
+    background:#0C1818;
+
+    display:flex;
+    align-items:center;
+}
+
+.header-inner{
+    width:100%;
+    padding:0 83px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header-logo{
+    height:40px;
+}
+
+.main-nav{
+    display:flex;
+    gap:60px;
+}
+
+.main-nav a{
+    text-decoration:none;
+    color:#A2A1FF;
+    font-size:35px;
+    transition:.3s;
+}
+
+.main-nav a:hover{
+    color:#0AC165;
+}
+
+/* ==========================
+SHOP
+========================== */
+
+.shop{
+    padding:50px 83px 180px;
+}
+
+.shop-title{
+    font-size:170px;
+    font-weight:400;
+    margin-bottom:60px;
+}
+
+/* ==========================
+GRID
+========================== */
+
+.shop-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* ==========================
+PRODUCT
+========================== */
+
+.product{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ==========================
+PHOTO
+========================== */
+
+.product-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:100%;
+
+    height:767px;
+
+    cursor:pointer;
+
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s ease;
+
+    display:block;
+
+}
+
+/* затемнение */
+
+.product-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.15);
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.product:hover .product-image::after{
+
+    opacity:1;
+
+}
+
+/* увеличение */
+
+.product:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+ADD BUTTON
+========================== */
+
+.add-btn{
+
+    position:absolute;
+
+    top:25px;
+
+    left:25px;
+
+    width:105px;
+
+    height:47px;
+
+    background:#0AC165;
+
+    border:none;
+
+    font-size:30px;
+
+    color:#0C1818;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    z-index:5;
+
+}
+
+.add-btn:hover{
+
+    background:#08a754;
+
+}
+
+/* ==========================
+INFO
+========================== */
+
+.product-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:22px;
+
+}
+
+.product-info span{
+
+    font-size:30px;
+
+    font-weight:400;
+
+}
+
+/* ==========================
+SHOW MORE
+========================== */
+
+.show-btn{
+
+    margin:120px auto 0;
+
+    width:560px;
+
+    height:88px;
+
+    background:#0C1818;
+
+    color:#A2A1FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:42px;
+
+    transition:.35s;
+
+}
+
+.show-btn:hover{
+
+    background:#0AC165;
+
+    color:#0C1818;
+
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+.site-footer{
+
+    width:100%;
+
+    height:620px;
+
+    background:#0C1818;
+
+    padding:70px 83px 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.footer-links-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+.footer-col-link{
+
+    text-decoration:none;
+
+    color:#A2A1FF;
+
+    font-size:45px;
+
+}
+
+.footer-col-link:hover{
+
+    color:#0AC165;
+
+}
+
+.footer-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    margin-top:70px;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:60px;
+
+}
+
+.footer-social a{
+
+    text-decoration:none;
+
+    color:#A2A1FF;
+
+    font-size:30px;
+
+}
+
+.footer-social a:hover{
+
+    color:#0AC165;
+
+}
+
+.footer-copyright{
+
+    font-size:23px;
+
+    color:#A2A1FF;
+
+}
+
+.footer-logo-wrap{
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding-bottom:90px;
+
+}
+
+.footer-logo{
+
+    width:1756px;
+
+    height:auto;
+}
+
+/* ==========================
+ANIMATION
+========================== */
+
+.product{
+
+    transition:.35s;
+
+}
+
+.product:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   MOBILE — MERCH
+   iPhone 13 (390px)
+========================================================== */
+
+@media (max-width:768px){
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+
+.site-header{
+    height:70px;
+}
+
+.header-inner{
+    padding:0 20px;
+}
+
+.header-logo{
+    width:145px;
+    height:auto;
+}
+
+.main-nav{
+    gap:18px;
+}
+
+.nav-link{
+    font-size:15px;
+}
+
+/* ================= TITLE ================= */
+
+.title{
+    font-size:64px;
+    line-height:.9;
+
+    margin-top:40px;
+    margin-bottom:20px;
+
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.intro{
+    font-size:20px;
+    line-height:1.45;
+
+    margin-top:25px;
+
+    padding-left:20px;
+    padding-right:20px;
+}
+
+/* ================= SHOP ================= */
+
+.products{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:45px;
+
+    padding:20px;
+}
+
+/* карточка */
+
+.product{
+
+    width:100%;
+}
+
+/* фото */
+
+.product-image{
+
+    width:100%;
+    height:auto;
+
+    display:block;
+}
+
+/* кнопка Add */
+
+.add-btn{
+
+    width:90px;
+    height:42px;
+
+    font-size:20px;
+
+    top:15px;
+    left:15px;
+}
+
+/* название + цена */
+
+.product-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-top:15px;
+}
+
+.product-title{
+
+    font-size:24px;
+}
+
+.product-price{
+
+    font-size:24px;
+}
+
+/* описание */
+
+.product-description{
+
+    font-size:18px;
+
+    line-height:1.45;
+
+    margin-top:12px;
+}
+
+/* SHOW MORE */
+
+.more-btn{
+
+    width:100%;
+
+    height:70px;
+
+    font-size:28px;
+
+    margin-top:25px;
+}
+
+/* ================= FOOTER ================= */
+
+.site-footer{
+
+    height:auto;
+
+    padding:45px 20px;
+}
+
+.footer-links-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.footer-col-link{
+
+    font-size:26px;
+}
+
+.footer-bottom{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    margin-top:40px;
+}
+
+.footer-social{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.footer-social-link,
+.footer-policy-link{
+
+    font-size:18px;
+}
+
+.footer-copyright{
+
+    font-size:14px;
+}
+
+.footer-logo-wrap{
+
+    margin-top:45px;
+
+    padding-bottom:0;
+}
+
+.footer-logo{
+
+    width:100%;
+    height:auto;
+}
+
+}

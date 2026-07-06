@@ -1,0 +1,562 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  background:#0C1818;
+  font-family:"BDO Grotesk", sans-serif;
+  font-weight:400; /* ✔ REGULAR */
+  color:#A2A1FF;
+}
+
+/* ================= HEADER ================= */
+.site-header{
+  height:85px;
+  width:100%;
+  background:#A2A1FF;
+  display:flex;
+  align-items:center;
+}
+
+.header-inner{
+  width:100%;
+  padding:0 83px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+
+.header-logo{
+  height:40px;
+  width:auto;
+}
+
+.logo-mirror{
+  display:inline-block;
+}
+
+.main-nav{
+  display:flex;
+  gap:60px;
+}
+
+.nav-link{
+  font-size:35px;
+  color:#0C1818;
+  text-decoration:none;
+}
+
+
+/* TITLE */
+.title{
+  font-size:168px;
+  margin-top:120px;
+  font-weight:400;
+}
+
+.intro{
+  font-size:40px;
+  margin-top:170px;
+  line-height:1.2;
+  max-width:1200px;
+  font-weight:400;
+}
+
+/* RECENT */
+.subtitle{
+  font-size:78px;
+  margin-top:140px;
+  font-weight:400;
+}
+
+/* GRID */
+.grid{
+  margin-top:60px;
+
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:20px;
+
+  align-items:stretch;
+}
+
+
+/* LEFT TEXT */
+.text-left{
+  grid-column:1 / 4;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between; /* ✔ верх/низ */
+  height:424px;
+}
+
+.text-left h3{
+  font-size:37px;
+  font-weight:400;
+}
+
+.sub{
+  font-size:35px;
+  font-weight:400;
+}
+
+.watch{
+  font-size:27px;
+  font-weight:400;
+
+  margin-top:auto; /* ✔ прижать вниз */
+}
+
+/* IMAGES - 3 columns FIX */
+.img-wrap{
+  grid-column:span 3;
+  height:424px;
+}
+
+.img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* RIGHT TEXT */
+.right-text{
+    grid-column:10 / 13;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    height:424px;
+
+    align-items:flex-start; /* выравнивание по левому краю */
+}
+.ticket-btn{
+    width:149.83px;
+    height:48px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#A2A1FF; /* или #A2A1FF */
+    color:#0C1818;
+
+    text-decoration:none;
+    font-size:35px;
+
+    margin:0;          /* убрать внешние отступы */
+    align-self:flex-start; /* прижать к левому краю */
+}
+.green-section .ticket-btn{
+    background:#0AC165;
+}
+.green-section{
+    color:#0AC165;
+}
+
+.green-section h2,
+.green-section h3,
+.green-section p,
+.green-section .sub,
+.green-section .watch,
+.green-section .right-text p{
+    color:#0AC165;
+}
+
+.green-section .ticket-btn{
+    background:#0AC165;
+    color:#0C1818;
+}
+
+
+/* GRID */
+.grid{
+  margin-top:60px;
+
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:20px;
+
+  align-items:stretch;
+}
+
+/* LEFT TEXT */
+.text-left{
+  grid-column:1 / 4;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between; /* ✔ верх/низ */
+  height:424px;
+}
+
+.text-left h3{
+  font-size:37px;
+  font-weight:400;
+}
+
+.sub{
+  font-size:35px;
+  font-weight:400;
+}
+
+.watch{
+  font-size:27px;
+  font-weight:400;
+
+  margin-top:auto; /* ✔ прижать вниз */
+}
+
+/* IMAGES - 3 columns FIX */
+.img-wrap{
+  grid-column:span 3;
+  height:424px;
+}
+
+.img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* RIGHT TEXT */
+.right-text{
+    grid-column:10 / 13;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    height:424px;
+
+    align-items:flex-start; /* выравнивание по левому краю */
+}
+.ticket-btn{
+    width:149.83px;
+    height:48px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#A2A1FF; /* или #A2A1FF */
+    color:#0C1818;
+
+    text-decoration:none;
+    font-size:35px;
+
+    margin:0;          /* убрать внешние отступы */
+    align-self:flex-start; /* прижать к левому краю */
+}
+
+.site-footer{
+    width:100%;
+    height:620px;
+    background:#A2A1FF;
+    padding:70px 83px 0 83px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+     margin-top:160px;
+}
+
+/* Верхние ссылки */
+
+.footer-links-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+
+.footer-col-link{
+    font-family:"BDO Grotesk", sans-serif;
+    font-size:45px;
+    font-weight:500;
+    color:#0C1818;
+    text-decoration:none;
+}
+
+/* Нижняя часть */
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top:70px;
+}
+
+.footer-social{
+    display:flex;
+    gap:60px;
+}
+
+.footer-social-link,
+.footer-policy-link{
+    font-family:"BDO Grotesk", sans-serif;
+    font-size:30px;
+    font-weight:500;
+    color:#0C1818;
+    text-decoration:none;
+}
+
+.footer-copyright{
+    margin-top:24px;
+    font-family:"BDO Grotesk", sans-serif;
+    font-size:23px;
+    font-weight:500;
+    color:#0C1818;
+}
+
+/* Логотип */
+
+.footer-logo-wrap{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    margin-top:auto;
+    padding-bottom:90px;
+}
+
+.footer-logo{
+    width:1756px;
+    height:171.25px;
+    object-fit:contain;
+}
+/* GLOBAL 83px margins (как в фигме) */
+.header-inner,
+.title,
+.intro,
+.subtitle,
+.grid,
+.site-footer{
+  padding-left:83px;
+  padding-right:83px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================================================
+   MOBILE — ARTISTS
+=========================================================== */
+
+@media (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+.site-header{
+    height:70px;
+}
+
+.header-inner{
+    padding:0 20px;
+}
+
+.header-logo{
+    width:150px;
+    height:auto;
+}
+
+.main-nav{
+    gap:18px;
+}
+
+.nav-link{
+    font-size:15px;
+}
+
+/* HERO */
+
+.title{
+    font-size:64px;
+    margin-top:40px;
+}
+
+.intro{
+    margin-top:30px;
+    font-size:20px;
+    line-height:1.4;
+    max-width:100%;
+}
+
+/* SECTIONS */
+
+.subtitle{
+    font-size:42px;
+    margin-top:70px;
+    margin-bottom:30px;
+}
+
+/* GRID */
+
+.grid{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-top:30px;
+}
+
+.text-left{
+    height:auto;
+}
+
+.text-left h3{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.sub{
+    font-size:22px;
+    margin-bottom:16px;
+}
+
+.watch{
+    font-size:17px;
+    margin-top:0;
+}
+
+.img-wrap{
+    width:100%;
+    height:auto;
+}
+
+.img-wrap img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.right-text{
+    height:auto;
+}
+
+.right-text p{
+    font-size:18px;
+    line-height:1.45;
+}
+
+/* BUTTON */
+
+.ticket-btn{
+    width:100%;
+    height:58px;
+
+    margin-top:20px;
+
+    font-size:24px;
+}
+
+/* CONTAINER */
+
+.title,
+.intro,
+.subtitle,
+.grid{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+/* FOOTER */
+
+.site-footer{
+
+    height:auto;
+
+    padding:45px 20px;
+
+}
+
+.footer-links-row{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+}
+
+.footer-col-link{
+
+    font-size:28px;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.footer-social-link,
+.footer-policy-link{
+
+    font-size:20px;
+
+}
+
+.footer-copyright{
+
+    font-size:15px;
+
+}
+
+.footer-logo-wrap{
+
+    padding-bottom:0;
+
+    margin-top:45px;
+
+}
+
+.footer-logo{
+
+    width:100%;
+
+    height:auto;
+
+}
+
+}
